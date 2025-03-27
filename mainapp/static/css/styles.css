@@ -1,0 +1,142 @@
+/* Фонова картинка з затемненням */
+body {
+    background: url('/static/images/Mandala.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Затемнення (оверлей) */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Напівпрозорий чорний */
+    z-index: -1;
+}
+
+/* Стилі для тексту */
+h1, p, a {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Навігація (меню) */
+nav {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 15px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Кнопки */
+button {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+/* Фон для сторінки поста */
+.post-container {
+    background: url('/static/images/Mandala.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Відображення тексту на фоні */
+.post-container h1, .post-container p, .post-container small {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Стиль для коментарів */
+.post-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.post-container li {
+    margin-bottom: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+}
+
+.post-container strong {
+    font-size: 1.2em;
+}
+
+/* Стилі для кнопок */
+button {
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Стиль для форми коментаря */
+form {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+/* Посилання на головну */
+a {
+    color: #fff;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}

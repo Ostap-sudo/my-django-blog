@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ post.title }}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="post-container">
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.content }}</p>
+        <small>Створено: {{ post.created_at }}</small>
+
+        <h2>Коментарі</h2>
+        <ul>
+            {% for comment in comments %}
+                <li>
+                    <strong>{{ comment.name }}</strong> ({{ comment.created_at }})
+                    <p>{{ comment.content }}</p>
+                </li>
+            {% empty %}
+                <li>Немає коментарів.</li>
+            {% endfor %}
+        </ul>
+
+        <h3>Залишити коментар:</h3>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Надіслати</button>
+        </form>
+
+        <a href="/">На головну</a>
+    </div>
+</body>
+</html>

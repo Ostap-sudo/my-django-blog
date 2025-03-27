@@ -1,0 +1,9 @@
+<!-- templates/recent_posts.html -->
+<h2>Останні пости</h2>
+{% for post in posts %}
+    <div>
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.content|slice:":200" }}...</p>
+        <p><a href="{% url 'post_detail' post.id %}">Читати більше</a></p>
+    </div>
+{% endfor %}

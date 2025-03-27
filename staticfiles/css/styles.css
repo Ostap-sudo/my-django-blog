@@ -1,0 +1,43 @@
+/* Загальні стилі для body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("{% static 'images/Mandala.jpg' %}");
+    background-size: cover; /* Фон покриває всю площу */
+    background-position: center; /* Центруємо фон */
+    background-attachment: fixed; /* Фон залишається на місці при прокручуванні */
+    color: #333;
+}
+
+/* Стилі для сторінок з контентом */
+h1 {
+    color: #ffffff; /* Білий колір для заголовків */
+    text-align: center;
+    padding-top: 50px;
+}
+
+/* Стилі для контейнера контенту */
+.about-content, .contact-form-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Напівпрозорий фон */
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form button {
+    background-color: #0073e6;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+form button:hover {
+    background-color: #005bb5;
+}

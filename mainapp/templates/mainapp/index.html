@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <title>Головна</title>
+</head>
+<body>
+    <h1>Блог про психологію</h1>
+
+    <nav>
+        <ul>
+            <li><a href="/">Головна</a></li>
+            <li><a href="{% url 'about' %}">Про мене</a></li>
+            <li><a href="{% url 'contact' %}">Контакти</a></li>
+        </ul>
+    </nav>
+
+    <h2>Основні підрозділи психології:</h2>
+    <ul>
+        {% for post in posts %}
+            <li>
+                <a href="{% url 'post_detail' post.slug %}">{{ post.title }}</a>
+            </li>
+        {% empty %}
+            <li>Немає постів</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
